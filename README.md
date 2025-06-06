@@ -26,7 +26,7 @@ Integrates with Git commits to ensure reproducibility
 Stores `.dvc` metadata files that can be committed and pushed
 
 🔧 Practical Steps I Followed
-bash
+`bash
 Copy
 Edit
 # Initialize git and clone repo
@@ -57,7 +57,7 @@ Edit
 12. Update code
 13. dvc status
 14. dvc commit && dvc push
-15. git commit -m "new version" && git push
+15. git commit -m "new version" && git push`
 
 
 🔄 Version Control Tips
