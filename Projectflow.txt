@@ -17,4 +17,8 @@
 14. again git add commit push (second version of data)
 15. repeat 12-14 steps for third version of the data.
 
+## git log --oneline
+## git checkout <hash> - git checkout master
+## dvc pull
+
 
