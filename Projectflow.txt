@@ -14,6 +14,7 @@
 11. git commit push and mark as first version of it.
 12. we can make changes in mycode.py and check the changes via "dvc status"
 13. again "dvc commit" and then "dvc push"
-14.
+14. again git add commit push (second version of data)
+15. repeat 12-14 steps for third version of the data.
 
 
