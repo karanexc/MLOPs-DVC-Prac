@@ -74,8 +74,8 @@
   ```
 
 ### ✅ Summary
-DVC makes ML projects reproducible
+* DVC makes ML projects reproducible
 
-Keeps data versions organized
+* Keeps data versions organized
 
-Links code + data seamlessly for efficient collaboration
+* Links code + data seamlessly for efficient collaboration
