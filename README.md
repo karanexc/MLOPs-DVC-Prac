@@ -53,6 +53,7 @@
 13. dvc status
 14. dvc commit && dvc push
 15. git commit -m "new version" && git push
+```
 
 
 ### 🔄 Version Control Tips
@@ -60,3 +61,4 @@
 - View commit history:  
   ```bash
   git log --oneline
+  ```
