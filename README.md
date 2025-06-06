@@ -1,34 +1,29 @@
-# MLOPs-DVC-Prac
-Implementing data versioning with DVC tool
+## 📘 Day 2 – MLOps Pipeline & DVC Concepts
 
-📘 Day 2 – MLOps Pipeline & DVC Concepts
-🧠 What I Learned
-🔁 ML Project Pipeline
-📥 Data Ingestion – Pull raw data from sources (S3, APIs, etc.)
+### 🧠 What I Learned
 
-🧹 Data Preprocessing – Clean and format raw data
+#### 🔁 **ML Project Pipeline**
+1. 📥 **Data Ingestion** – Pull raw data from sources (S3, APIs, etc.)  
+2. 🧹 **Data Preprocessing** – Clean and format raw data  
+3. 🛠️ **Feature Engineering** – Create new features  
+4. 🔍 **Feature Extraction** – Select important features  
+5. 🤖 **Model Training** – Train ML models  
+6. 📊 **Model Evaluation** – Measure model performance  
 
-🛠️ Feature Engineering – Create new features
+---
 
-🔍 Feature Extraction – Select important features
+### 🗃️ **DVC (Data Version Control)**
 
-🤖 Model Training – Train ML models
+- 🧬 DVC helps track **large files** and **models** like Git tracks code  
+- Every version of your data/model is assigned a **unique hash**  
+- Integrates with Git commits to ensure **reproducibility**  
+- Stores `.dvc` metadata files that can be committed and pushed  
 
-📊 Model Evaluation – Measure model performance
+---
 
-🗃️ DVC (Data Version Control)
-🧬 DVC helps track large files and models like Git tracks code
+### 🔧 **Practical Steps I Followed**
 
-Every version of your data/model is assigned a unique hash
-
-Integrates with Git commits to ensure reproducibility
-
-Stores `.dvc` metadata files that can be committed and pushed
-
-🔧 Practical Steps I Followed
-`bash
-Copy
-Edit
+```bash
 # Initialize git and clone repo
 1. Create repo & clone locally
 
@@ -57,16 +52,13 @@ Edit
 12. Update code
 13. dvc status
 14. dvc commit && dvc push
-15. git commit -m "new version" && git push`
+15. git commit -m "new version" && git push
 
+### 🔄 Version Control Tips
 
-🔄 Version Control Tips
-View commit history:
-
-bash
-Copy
-Edit
-git log --oneline
+- View commit history:  
+  ```bash
+  git log --oneline
 Revert to a version:
 
 bash
@@ -79,9 +71,3 @@ bash
 Copy
 Edit
 dvc pull
-✅ Summary
-DVC makes ML projects reproducible
-
-Keeps data versions organized
-
-Links code + data seamlessly for efficient collaboration
