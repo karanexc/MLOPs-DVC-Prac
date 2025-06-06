@@ -10,6 +10,7 @@
     (it will ask to remove the git tracking permissions, we can do ("git rm -r --cached 'data' and "git commit -m "stopped tracking data")
     because initially we were tracking with git and now we remove it for DVC to handle.
 9. Again do the step 8 i.e "dvc add data/" then "git add .gitignore data.dvc"
-
+10. now "dvc commit" and then "dvc push"
+11. git commit push and mark as first version of it.
 
 
