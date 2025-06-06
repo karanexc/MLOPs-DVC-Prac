@@ -1,4 +1,28 @@
-🔧 Practical Steps I Followed
+## 📘 Day 2 – MLOps Pipeline & DVC Concepts
+
+### 🧠 What I Learned
+
+#### 🔁 ML Project Pipeline
+1. 📥 **Data Ingestion** – Pull raw data from sources (S3, APIs, etc.)  
+2. 🧹 **Data Preprocessing** – Clean and format raw data  
+3. 🛠️ **Feature Engineering** – Create new features  
+4. 🔍 **Feature Extraction** – Select important features  
+5. 🤖 **Model Training** – Train ML models  
+6. 📊 **Model Evaluation** – Measure model performance  
+
+---
+
+### 🗃️ DVC (Data Version Control)
+
+- 🧬 DVC helps track **large files** and **models** like Git tracks code  
+- Every version of your data/model is assigned a **unique hash**  
+- Integrates with Git commits to ensure **reproducibility**  
+- Stores `.dvc` metadata files that can be committed and pushed  
+
+---
+
+### 🔧 Practical Steps I Followed
+
 ```bash
 # Initialize git and clone repo
 1. Create repo & clone locally
