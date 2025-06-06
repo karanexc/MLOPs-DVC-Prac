@@ -2,62 +2,86 @@
 Implementing data versioning with DVC tool
 
 📘 Day 2 – MLOps Pipeline & DVC Concepts
-✅ What I Learned
-ML Project Pipeline:
+🧠 What I Learned
+🔁 ML Project Pipeline
+📥 Data Ingestion – Pull raw data from sources (S3, APIs, etc.)
 
-Data Ingestion – Pull raw data from external sources (e.g., S3).
+🧹 Data Preprocessing – Clean and format raw data
 
-Data Preprocessing – Clean and structure the data.
+🛠️ Feature Engineering – Create new features
 
-Feature Engineering – Derive meaningful features.
+🔍 Feature Extraction – Select important features
 
-Feature Extraction – Select relevant features for training.
+🤖 Model Training – Train ML models
 
-Model Training – Train machine learning models.
+📊 Model Evaluation – Measure model performance
 
-Model Evaluation – Assess performance with metrics.
+🗃️ DVC (Data Version Control)
+🧬 DVC helps track large files and models like Git tracks code
 
-DVC (Data Version Control):
+Every version of your data/model is assigned a unique hash
 
-Git handles code versioning, DVC handles data and model versioning.
+Integrates with Git commits to ensure reproducibility
 
-Each data version gets a unique hash that is committed alongside code.
+Stores `.dvc` metadata files that can be committed and pushed
 
-This ensures reproducibility of results.
+🔧 Practical Steps I Followed
+bash
+Copy
+Edit
+# Initialize git and clone repo
+1. Create repo & clone locally
 
-🗃️ My Practical Workflow Today
-Initialized Git repo and cloned it locally.
+# Add sample code
+2. Create mycode.py (saves data to /data)
 
-Created mycode.py to generate and save data into a data/ folder.
+# Start Git versioning
+3. git add, commit, push
 
-Committed and pushed initial code using Git.
+# Start DVC versioning
+4. pip install dvc
+5. dvc init
+6. mkdir S3  # simulate cloud storage
+7. dvc remote add -d myremote S3/
 
-Installed DVC and initialized it using dvc init.
+# Track data with DVC
+8. dvc add data/
+   git rm -r --cached data/
+   git commit -m "stopped tracking data"
 
-Created a mock S3/ folder to simulate remote storage.
+9. git add .gitignore data.dvc
+10. dvc commit && dvc push
+11. git commit -m "first version" && git push
 
-Added remote using:
-dvc remote add -d myremote S3/
+# Make changes and repeat
+12. Update code
+13. dvc status
+14. dvc commit && dvc push
+15. git commit -m "new version" && git push
 
-Stopped Git from tracking data/ and handed it off to DVC using:
-dvc add data/
-Then:
-git rm -r --cached data/
-git commit -m "Stopped tracking data with Git"
 
-Added DVC files:
-git add .gitignore data.dvc
-dvc commit
-dvc push
+🔄 Version Control Tips
+View commit history:
 
-Committed code changes with Git – first version complete!
-
-Repeated the flow (steps 7–9) for second and third versions.
-
-Verified version tracking using:
-
+bash
+Copy
+Edit
 git log --oneline
+Revert to a version:
 
+bash
+Copy
+Edit
 git checkout <commit-hash>
+Restore data version:
 
-dvc pull to retrieve correct data version.
+bash
+Copy
+Edit
+dvc pull
+✅ Summary
+DVC makes ML projects reproducible
+
+Keeps data versions organized
+
+Links code + data seamlessly for efficient collaboration
