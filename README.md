@@ -62,3 +62,20 @@
   ```bash
   git log --oneline
   ```
+
+- Revert to a version:
+  ```bash
+  git checkout <commit-hash>
+  ```
+
+- Restore data version:
+  ```
+  dvc pull
+  ```
+
+### ✅ Summary
+DVC makes ML projects reproducible
+
+Keeps data versions organized
+
+Links code + data seamlessly for efficient collaboration
